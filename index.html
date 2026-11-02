@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+      <div class="logo">🌤️ WeatherDash</div>
+
+      <div class="search">
+        <input
+          id="cityInput"
+          type="text"
+          placeholder="Search city..."
+          value="Karachi"
+        />
+        <button onclick="searchCity()">Search</button>
+      </div>
+    </header>
+
+    <div id="error" class="error"></div>
+
+    <div id="loading" class="loading">
+      Loading weather...
+    </div>
+
+    <main id="dashboard" style="display:none;">
+
+      <section class="main-card">
+
+        <div class="location" id="location">
+          Karachi, Pakistan
+        </div>
+
+        <div class="date" id="date"></div>
+
+        <div class="current">
+
+          <div>
+            <div class="temperature" id="temperature">--°</div>
+            <div class="condition" id="condition">Loading...</div>
+          </div>
+
+          <div class="weather-icon" id="weatherIcon">
+            ☀️
+          </div>
+
+        </div>
+
+        <div class="stats">
+
+          <div class="stat">
+            <div class="stat-icon">💧</div>
+            <div class="stat-title">Humidity</div>
+            <div class="stat-value" id="humidity">--%</div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-icon">💨</div>
+            <div class="stat-title">Wind</div>
+            <div class="stat-value" id="wind">-- km/h</div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-icon">🌡️</div>
+            <div class="stat-title">Feels Like</div>
+            <div class="stat-value" id="feels">--°</div>
+          </div>
+
+          <div class="stat">
+            <div class="stat-icon">☔</div>
+            <div class="stat-title">Rain</div>
+            <div class="stat-value" id="rain">-- mm</div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="main-card">
+
+        <h2>7-Day Forecast</h2>
+
+        <div class="forecast" id="forecast"></div>
+
+      </section>
+
+    </main>
+
+    <footer>
+      Weather data powered by Open-Meteo
+    </footer>
+
+  </div>
+<script src="./script.js"></script>
+</body>
+</html>
